@@ -62,7 +62,6 @@ const Home = () => {
           start: "bottom top",
           end: "bottom top",
           scrub: 2,
-          markers: true,
         },
       });
       gsap.to(lightDarkRef.current, {
@@ -72,7 +71,6 @@ const Home = () => {
           start: "bottom top",
           end: "bottom top",
           scrub: 2,
-          markers: true,
         },
       });
     },

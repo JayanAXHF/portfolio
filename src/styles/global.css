@@ -1,1 +1,17 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-light-primary: #fcfaf2;
+  --color-dark-primary: #111111;
+  --color-highlight: #dee7f1;
+  --font-title: 'JetBrains Mono', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+.image-cursor {
+  cursor: url('/jayan-photo.png'), auto;
+}
+
+.light-dark-marker {
+  color: var(--color-dark-primary);
+}

@@ -34,7 +34,7 @@ const projects = [
     title: "modder-rs",
     description:
       "An expansive terminal UI application to make downloading, updating and managing minecraft mods easier.",
-    link: "https://github.com/jayansunil/modder-rs",
+    link: "https://github.com/jayanaxhf/modder-rs",
   },
 ];
 

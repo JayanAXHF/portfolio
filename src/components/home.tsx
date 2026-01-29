@@ -144,7 +144,7 @@ const Home = () => {
           trigger: nameSvgRef.current,
           start: "bottom center",
           end: "bottom center",
-          scrub: 1,
+          scrub: 0.5,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -157,7 +157,7 @@ const Home = () => {
           trigger: nameSvgRef.current,
           start: "bottom center",
           end: "bottom center",
-          scrub: 1,
+          scrub: 0.5,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -211,7 +211,7 @@ const Home = () => {
         ))}
       </div>
       <div
-        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body"
+        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10"
         ref={containerRef}
       >
         <div className="md:h-dvh md:w-dvw flex justify-between items-between flex-col">
@@ -333,7 +333,7 @@ const Home = () => {
         </div>
         <div className="w-full min-h-dvh z-0" ref={munsSectionRef}>
           <h1
-            className="xl:text-[10rem] text-7xl font-title"
+            className="xl:text-[10rem] text-5xl font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
@@ -369,9 +369,9 @@ const Home = () => {
             </span>
           ))}
         </div>
-        <div className="w-full min-h-dvh z-0 flex flex-col-reverse items-between justify-between">
+        <div className="w-full min-h-dvh z-0 p-0 flex flex-col py-10 items-center justify-center">
           <h1
-            className="xl:text-[10rem] text-6xl font-title"
+            className="lg:text-[10rem] font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
@@ -381,15 +381,15 @@ const Home = () => {
             Interested?
           </h1>
           <div
-            className="flex flex-row-reverse px-5 font-body font-bold py-5  w-full"
+            className="flex items-center justify-center px-5 font-body font-bold w-full"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
               }
             }}
           >
-            <div className="flex flex-col">
-              <h3 className="font-title text-xl font-bold">Contact Me</h3>
+            <div className="flex flex-col *:text-center">
+              <h3 className="font-title text-2xl font-bold">Contact Me</h3>
               <a
                 className="underline cursor-pointer"
                 href="mailto:sunil.chdry@gmail.com"

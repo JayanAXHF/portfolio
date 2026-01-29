@@ -170,8 +170,6 @@ const Home = () => {
           end: "bottom center",
           scrub: true,
         },
-        duration: 0.5,
-        ease: "power1.inOut",
       });
       gsap.to(lightDarkRef.current, {
         color: "var(--color-dark-primary)",
@@ -183,8 +181,7 @@ const Home = () => {
           end: "bottom center",
           scrub: true,
         },
-        duration: 0.5,
-        ease: "power1.inOut",
+        duration: 1,
       });
     },
 

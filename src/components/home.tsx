@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ReactLenis, useLenis } from "lenis/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "@fontsource/space-grotesk";
 import "@fontsource/jetbrains-mono";
 import Project from "./project";
@@ -106,6 +107,18 @@ const Home = () => {
   const munsSectionRef = useRef(null);
   const imgRef = useRef(null);
 
+  const lenisRef = useRef(null);
+
+  useEffect(() => {
+    function update(time: any) {
+      lenisRef.current?.lenis?.raf(time * 1000);
+    }
+
+    gsap.ticker.add(update);
+
+    return () => gsap.ticker.remove(update);
+  }, []);
+
   const onEnter = () => {
     console.debug("Enter");
     gsap.to(imgRef.current, { autoAlpha: 1, duration: 0.2 });
@@ -131,7 +144,8 @@ const Home = () => {
           trigger: nameSvgRef.current,
           start: "bottom center",
           end: "bottom center",
-          scrub: true,
+          scrub: 1,
+          markers: true,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -144,7 +158,8 @@ const Home = () => {
           trigger: nameSvgRef.current,
           start: "bottom center",
           end: "bottom center",
-          scrub: true,
+          scrub: 1,
+          markers: true,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -153,9 +168,10 @@ const Home = () => {
         backgroundColor: "var(--color-light-primary)",
         scrollTrigger: {
           trigger: projectsSectionRef.current,
-          start: "bottom 20%",
-          end: "bottom 20%",
+          start: "bottom center",
+          end: "bottom center",
           scrub: true,
+          markers: true,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -166,9 +182,10 @@ const Home = () => {
         fill: "var(--color-dark-primary)",
         scrollTrigger: {
           trigger: projectsSectionRef.current,
-          start: "bottom 20%",
-          end: "bottom 20%",
+          start: "bottom center",
+          end: "bottom center",
           scrub: true,
+          markers: true,
         },
         duration: 0.5,
         ease: "power1.inOut",
@@ -180,6 +197,7 @@ const Home = () => {
 
   return (
     <div className="h-full">
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <img
         src="/jayan-photo.png"
         alt="jayan"
@@ -227,6 +245,12 @@ const Home = () => {
               <span>Metadata</span>
               <span>14 y/o</span>
               <span>Gurgaon, India</span>
+              <a
+                href="https://github.com/jayanaxhf"
+                className="underline cursor-pointer"
+              >
+                github.com/jayanaxhf
+              </a>
               <a
                 href="mailto:sunil.chdry@gmail.com"
                 className="underline cursor-pointer"

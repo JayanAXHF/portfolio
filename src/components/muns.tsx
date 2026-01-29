@@ -11,7 +11,7 @@ const MUN = ({ year, name, committee, award, portfolio }: Props) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <div
-      className={`w-full h-12 hover:h-36 relative before:absolute before:top-0 before:h-px before:w-[200vw] transition-[background] duration-600 ease-in-out
+      className={`w-full h-12 hover:h-36 relative before:absolute before:top-0 before:h-px before:w-[200vw] transition-[background] transition-[height] duration-300 ease-in-out
             before:bg-dark-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-dark-primary after:-left-[100vw] px-2 py-2 hover:text-dark-primary hover:bg-highlight  flex items-center cursor-pointer `}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}

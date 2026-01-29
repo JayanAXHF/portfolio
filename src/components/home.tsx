@@ -321,7 +321,18 @@ const Home = () => {
             <p className="text-lg lg:max-w-1/4">
               I develop and design websites and terminal-based CLI and TUI
               tools. I am also currently learning compiler design. I&apos;m a
-              member of T-Triage at rust-lang.
+              member of{" "}
+              <a
+                href="https://rust-lang.org/governance/teams/#team-triage"
+                className="underline"
+              >
+                T-Triage
+              </a>{" "}
+              at{" "}
+              <a href="https://rust-lang.org/" className="underline">
+                rust-lang
+              </a>
+              .
             </p>
           </div>
           {projects.map((project, index) => (

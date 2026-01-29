@@ -216,10 +216,10 @@ const Home = () => {
         ))}
       </div>
       <main
-        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10 md:px-0 px-5"
+        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10 md:px-0 px-5 overflow-x-hidden"
         ref={containerRef}
       >
-        <div className="md:h-dvh md:w-dvw flex justify-between items-between flex-col">
+        <div className="md:h-dvh md:w-dvw flex justify-between items-between flex-col-reverse md:flex-col">
           <div className="flex md:flex-row flex-col justify-between px-5 font-body font-bold py-5 z-10">
             <p
               className="text-lg md:max-w-1/4"
@@ -233,7 +233,7 @@ const Home = () => {
               Gurgaon India. I’m currently studying in Grade IX.
             </p>
             <p
-              className="text-lg flex flex-col "
+              className="text-lg flex flex-col text-center md:text-left pt-5 md:pt-0"
               ref={(r) => {
                 if (lightDarkRef?.current) {
                   lightDarkRef.current.push(r);
@@ -266,7 +266,7 @@ const Home = () => {
             }}
           >
             <div className="w-full text-lg flex flex-col gap-5  z-50">
-              <div className="flex flex-row justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference">
+              <div className="flex flex-row justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
                 <span>MUNer</span>
                 <span>Software Developer</span>
                 <span>Student</span>
@@ -286,7 +286,7 @@ const Home = () => {
                   }}
                 />
               </span>
-              <div className="flex lg:flex-row flex-col justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference">
+              <div className="flex lg:flex-row flex-col justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
                 <span className="text-center w-full">Next.js</span>
                 <span className="text-center w-full">Typscript</span>
                 <span className="text-center w-full">Rust</span>
@@ -376,7 +376,7 @@ const Home = () => {
         </div>
         <div className="w-full min-h-dvh z-0 p-0 flex flex-col py-10 items-center justify-center">
           <h1
-            className="lg:text-[10rem] text-6xl font-title"
+            className="lg:text-[10rem] text-5xl font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);

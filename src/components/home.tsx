@@ -211,13 +211,13 @@ const Home = () => {
         ))}
       </div>
       <div
-        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10"
+        className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10 md:px-0 px-5"
         ref={containerRef}
       >
         <div className="md:h-dvh md:w-dvw flex justify-between items-between flex-col">
-          <div className="flex flex-row justify-between px-5 font-body font-bold py-5 z-10">
+          <div className="flex md:flex-row flex-col justify-between px-5 font-body font-bold py-5 z-10">
             <p
-              className="text-lg max-w-1/4"
+              className="text-lg md:max-w-1/4"
               ref={(r) => {
                 if (lightDarkRef?.current) {
                   lightDarkRef.current.push(r);
@@ -235,7 +235,7 @@ const Home = () => {
                 }
               }}
             >
-              <span>Metadata</span>
+              <span className="font-title underline">Metadata</span>
               <span>14 y/o</span>
               <span>Gurgaon, India</span>
               <a
@@ -371,7 +371,7 @@ const Home = () => {
         </div>
         <div className="w-full min-h-dvh z-0 p-0 flex flex-col py-10 items-center justify-center">
           <h1
-            className="lg:text-[10rem] font-title"
+            className="lg:text-[10rem] text-6xl font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);

@@ -278,7 +278,7 @@ const Home = () => {
                 ref={nameSvgRef}
               >
                 <BigName
-                  className="max-w-dvw w-full px-20 py-5 h-auto z-50 fill-dark-primary"
+                  className="max-w-dvw w-full px-20 py-5 h-auto z-50 fill-dark-primary cursor-none"
                   ref={(r) => {
                     if (lightDarkRef?.current) {
                       lightDarkRef.current.push(r);

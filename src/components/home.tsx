@@ -281,7 +281,7 @@ const Home = () => {
                   }}
                 />
               </span>
-              <div className="flex flex-row justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference">
+              <div className="flex lg:flex-row flex-col justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference">
                 <span className="text-center w-full">Next.js</span>
                 <span className="text-center w-full">Typscript</span>
                 <span className="text-center w-full">Rust</span>
@@ -295,7 +295,7 @@ const Home = () => {
         </div>
         <div className="w-full min-h-dvh z-0" ref={projectsSectionRef}>
           <h1
-            className="text-[10rem] font-title"
+            className="xl:text-[10rem] text-7xl font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
@@ -305,14 +305,14 @@ const Home = () => {
             Notable Projects
           </h1>
           <div
-            className="flex flex-row-reverse justify-between px-5 font-body font-bold py-5  w-full"
+            className="flex lg:flex-row-reverse justify-between px-5 font-body font-bold py-5  w-full"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
               }
             }}
           >
-            <p className="text-lg max-w-1/4">
+            <p className="text-lg lg:max-w-1/4">
               I develop and design websites and terminal-based CLI and TUI
               tools. I am also currently learning compiler design. I&apos;m a
               member of T-Triage at rust-lang.
@@ -333,7 +333,7 @@ const Home = () => {
         </div>
         <div className="w-full min-h-dvh z-0" ref={munsSectionRef}>
           <h1
-            className="text-[10rem] font-title"
+            className="xl:text-[10rem] text-7xl font-title"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
@@ -343,14 +343,14 @@ const Home = () => {
             MUN Experience
           </h1>
           <div
-            className="flex flex-row-reverse justify-between px-5 font-body font-bold py-5  w-full"
+            className="flex lg:flex-row-reverse justify-between px-5 font-body font-bold py-5  w-full"
             ref={(r) => {
               if (lightDarkRef?.current) {
                 lightDarkRef.current.push(r);
               }
             }}
           >
-            <p className="text-lg max-w-1/4">
+            <p className="text-lg lg:max-w-1/4">
               I am an avid fanatic for Model UN Conferences. I started my MUN
               journey in Grade VIII, and I have been participating in Model UN
               Conferences since then.
@@ -368,6 +368,42 @@ const Home = () => {
               <MUN {...mun} />
             </span>
           ))}
+        </div>
+        <div className="w-full min-h-dvh z-0 flex flex-col-reverse items-between justify-between">
+          <h1
+            className="xl:text-[10rem] text-6xl font-title"
+            ref={(r) => {
+              if (lightDarkRef?.current) {
+                lightDarkRef.current.push(r);
+              }
+            }}
+          >
+            Interested?
+          </h1>
+          <div
+            className="flex flex-row-reverse px-5 font-body font-bold py-5  w-full"
+            ref={(r) => {
+              if (lightDarkRef?.current) {
+                lightDarkRef.current.push(r);
+              }
+            }}
+          >
+            <div className="flex flex-col">
+              <h3 className="font-title text-xl font-bold">Contact Me</h3>
+              <a
+                className="underline cursor-pointer"
+                href="mailto:sunil.chdry@gmail.com"
+              >
+                sunil.chdry@gmail.com
+              </a>
+              <a
+                className="underline cursor-pointer"
+                href="https://github.com/jayanaxhf"
+              >
+                github.com/jayanaxhf
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

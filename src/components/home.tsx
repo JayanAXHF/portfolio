@@ -23,7 +23,12 @@ const projects = [
     title: "Vultam",
     description:
       "An AI chatbot integrated with a model that understands the questions of CBSE students",
-    link: "https://github.com/jayanaxhf/shiv-nadar",
+    link: "https://github.com/JayanAXHF/Vultam",
+  },
+  {
+    title: "homebrew-zathura",
+    description: "A Homebrew formula for the zathura PDF viewer",
+    link: "https://github.com/homebrew-zathura/homebrew-zathura",
   },
   {
     title: "modder-rs",

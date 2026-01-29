@@ -215,7 +215,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div
+      <main
         className="h-full w-dvw bg-light-primary min-w-dvw min-h-dvh font-body flex flex-col gap-y-10 md:px-0 px-5"
         ref={containerRef}
       >
@@ -410,7 +410,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

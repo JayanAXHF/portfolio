@@ -14,7 +14,7 @@ const Project = ({ index, title, description, link }: Props) => {
         <span>[{index}]</span>
         <div className="w-full flex flex-row justify-between items-center grow px-5">
           <h2 className="text-5xl">{title}</h2>
-          <p className="text-lg">{description}</p>
+          <p className="text-lg max-w-1/2">{description}</p>
         </div>
       </div>
     </a>

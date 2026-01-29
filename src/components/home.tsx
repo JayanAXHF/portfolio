@@ -197,7 +197,7 @@ const Home = () => {
     <div className="h-full">
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <img
-        src="/jayan-photo.png"
+        src="/jayan-photo.avif"
         alt="jayan"
         className="absolute w-[200px] h-[300px] object-cover -translate-x-2/4 -translate-y-2/4 z-[9] opacity-0 pointer-events-none"
         ref={imgRef}

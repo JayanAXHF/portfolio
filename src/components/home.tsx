@@ -267,10 +267,14 @@ const Home = () => {
             }}
           >
             <div className="w-full text-lg flex flex-col gap-5  z-50">
-              <div className="flex flex-row justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
-                <span>MUNer</span>
-                <span>Software Developer</span>
-                <span>Student</span>
+              <div className="flex lg:flex-row flex-col justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
+                <span className="text-center w-full">Next.js</span>
+                <span className="text-center w-full">Typscript</span>
+                <span className="text-center w-full">Rust</span>
+                <span className="text-center w-full">Zig</span>
+                <span className="text-center w-full">Python</span>
+                <span className="text-center w-full">Figma</span>
+                <span className="text-center w-full">Astro</span>
               </div>
               <span
                 onMouseEnter={onEnter}
@@ -287,14 +291,10 @@ const Home = () => {
                   }}
                 />
               </span>
-              <div className="flex lg:flex-row flex-col justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
-                <span className="text-center w-full">Next.js</span>
-                <span className="text-center w-full">Typscript</span>
-                <span className="text-center w-full">Rust</span>
-                <span className="text-center w-full">Zig</span>
-                <span className="text-center w-full">Python</span>
-                <span className="text-center w-full">Figma</span>
-                <span className="text-center w-full">Astro</span>
+              <div className="flex flex-row justify-between px-5 font-body font-bold relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-light-primary before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-light-primary after:-left-[100vw] before:mix-blend-difference after:mix-blend-difference text-sm lg:text-base">
+                <span>MUNer</span>
+                <span>Software Developer</span>
+                <span>Student</span>
               </div>
             </div>
           </div>

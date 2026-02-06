@@ -461,7 +461,7 @@ const Home = () => {
           ))}
         </div>
         <div
-          className="w-full min-h-dvh z-0 p-0 flex flex-col lg:flex-row py-10 items-end justify-between relative perspective-distant"
+          className="w-full min-h-dvh z-0 p-0 flex flex-col lg:flex-row py-10 lg:items-end items-center justify-between relative perspective-distant"
           ref={contactRef}
           id="contact"
         >
@@ -475,7 +475,7 @@ const Home = () => {
             className="size-[165dvh] rounded-full border border-dashed border-dark-primary/15 absolute border-2 top-0 bottom-0 -right-1/2 mx-auto my-auto pointer-events-none"
             ref={ring1Ref}
           />
-          <div className="min-h-[40dvh] h-max flex flex-col justify-start items-start">
+          <div className="lg:min-h-[40dvh] h-max flex flex-col justify-center lg:justify-start lg:items-start lg:px-5">
             <div>
               <h1
                 className="lg:text-[11rem] text-5xl font-title"
@@ -487,7 +487,7 @@ const Home = () => {
               >
                 Like what{" "}
               </h1>
-              <div className="flex flex-row items-center">
+              <div className="flex lg:flex-row flex-col gap-y-5 items-center">
                 <h1
                   className="lg:text-[11rem] text-5xl font-title pb-5"
                   ref={(r) => {
@@ -498,22 +498,24 @@ const Home = () => {
                 >
                   you see?
                 </h1>
-                <button
-                  className="py-2 px-5 rounded-full border-dark-primary border cursor-pointer h-12  group"
-                  ref={(r) => {
-                    if (lightDarkRef?.current) {
-                      lightDarkRef.current.push(r);
-                    }
-                  }}
-                >
-                  <span className="flex flex-row items-center justify-center gap-2 relative after:absolute after:bottom-0 after:h-px after:scale-0 after:w-full after:bg-dark-primary group-hover:after:scale-100 after:transition-transform after:origin-bottom-left after:duration-250 after:left-0">
-                    Contact <ArrowRight className="size-[16px]" />
-                  </span>
-                </button>
+                <a href="mailto:sunil.chdry@gmail.com">
+                  <button
+                    className="py-2 px-5 rounded-full border-dark-primary border cursor-pointer h-12  group"
+                    ref={(r) => {
+                      if (lightDarkRef?.current) {
+                        lightDarkRef.current.push(r);
+                      }
+                    }}
+                  >
+                    <span className="flex flex-row items-center justify-center gap-2 relative after:absolute after:bottom-0 after:h-px after:scale-0 after:w-full after:bg-dark-primary group-hover:after:scale-100 after:transition-transform after:origin-bottom-left after:duration-250 after:left-0">
+                      Contact <ArrowRight className="size-[16px]" />
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
-          <div className="px-10 max-w-1/2 grow py-5 flex flex-row justify-start items-start min-h-[40dvh]">
+          <div className="px-10 max-w-1/2 grow py-5 flex flex-row lg:justify-start lg:items-start justify-center  lg:min-h-[40dvh]">
             <div>
               <p
                 className="text-xl font-title"

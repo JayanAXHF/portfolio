@@ -8,10 +8,6 @@
   --font-body: 'Space Grotesk', sans-serif;
 }
 
-.image-cursor {
-  cursor: url('/jayan-photo.png'), auto;
-}
-
 .light-dark-marker {
   color: var(--color-dark-primary);
 }

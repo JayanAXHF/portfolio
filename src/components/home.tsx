@@ -155,8 +155,8 @@ const Home = () => {
 
   const onMove = (e: any) => {
     gsap.set(imgRef.current, {
-      x: e.pageX + 100,
-      y: e.pageY + 150,
+      x: e.pageX + 75,
+      y: e.pageY + 125,
       duration: 1,
       ease: "power1.inOut",
     });

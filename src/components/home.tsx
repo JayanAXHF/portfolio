@@ -23,6 +23,14 @@ const projects = [
     image: "/filessh.avif",
   },
   {
+    title: "gitv",
+
+    description:
+      "gitv is a terminal-based viewer for GitHub issues which allows you to view and manage issues directly from the terminal.",
+    link: "https://github.com/jayanaxhf/gitv",
+    image: "/gitv.avif",
+  },
+  {
     title: "Valtam",
     description:
       "An AI chatbot integrated with a model that understands the questions of CBSE students",

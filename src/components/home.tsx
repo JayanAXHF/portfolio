@@ -304,7 +304,7 @@ const Home = () => {
               }}
             >
               <span className="font-title underline">Metadata</span>
-              <span>14 y/o</span>
+              <span>15 y/o</span>
               <span>Gurgaon, India</span>
               <a
                 href="https://github.com/jayanaxhf"

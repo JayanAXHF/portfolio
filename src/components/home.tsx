@@ -116,6 +116,13 @@ const muns = [
     portfolio: "Rapporteur",
     award: "",
   },
+  }
+    name: "IUMUN",
+    year: 2026
+    committee: "JCC (US)",
+    portfolio: "Secretary of War",
+    award: "High Commendation (2nd)",
+  }
 ];
 
 const Home = () => {

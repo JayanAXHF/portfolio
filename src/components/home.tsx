@@ -308,7 +308,7 @@ const Home = () => {
             >
               I&apos;m Jayan, a Software Developer, MUNer, PCB development
               enthusiast and student based in Gurgaon India. I’m currently
-              studying in Grade IX.
+              studying in Grade X.
             </p>
             <p
               className="text-lg flex flex-col text-center md:text-left pt-5 md:pt-0"

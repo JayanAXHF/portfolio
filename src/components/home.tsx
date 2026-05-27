@@ -11,8 +11,17 @@ import Project from "./project";
 import BigName from "./big_name";
 import MUN from "./muns";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Toaster, toast as sonnerToast } from "sonner";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, SplitText);
+
+interface MUN {
+  year: number;
+  name: string;
+  committee: string;
+  portfolio: string;
+  award: string;
+}
 
 const projects = [
   {
@@ -52,7 +61,7 @@ const projects = [
   },
 ];
 
-const muns = [
+const muns: MUN[] = [
   {
     name: "AIKYAM",
     year: 2024,
@@ -257,6 +266,7 @@ const Home = () => {
 
   return (
     <div className="h-full">
+      <Toaster />
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <img
         src="/jayan-photo.avif"
@@ -474,6 +484,24 @@ const Home = () => {
               <MUN {...mun} />
             </span>
           ))}
+          <button
+            className="underline px-5 cursor-pointer"
+            onClick={async () => {
+              const text = muns.map(mun_to_text).join("\n");
+              try {
+                await navigator.clipboard.writeText(text);
+                toast({
+                  title: "Copied to Clipboard",
+                });
+              } catch (err) {
+                toast({
+                  title: `Error: ${err}`,
+                });
+              }
+            }}
+          >
+            copy
+          </button>
         </div>
         <div
           className="w-full min-h-dvh z-0 p-0 flex flex-col lg:flex-row py-10 lg:items-end items-center justify-between relative perspective-distant"
@@ -610,4 +638,31 @@ const Home = () => {
   );
 };
 
+function mun_to_text(mun: MUN) {
+  return `${mun.name} - ${mun.committee} - ${mun.portfolio} - ${mun.award}`;
+}
+
 export default Home;
+
+function toast(toast: Omit<ToastProps, "id">) {
+  return sonnerToast.custom((id) => <Toast id={id} title={toast.title} />);
+}
+
+function Toast(props: ToastProps) {
+  const { title } = props;
+
+  return (
+    <div className="flex ring-1 ring-black w-full md:max-w-[364px] items-center p-4">
+      <div className="flex flex-1 items-center">
+        <div className="w-full">
+          <p className="text-sm font-medium text-gray-900">{title}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface ToastProps {
+  title: string;
+  id: string | number;
+}

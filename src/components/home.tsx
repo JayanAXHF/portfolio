@@ -131,7 +131,7 @@ const muns: MUN[] = [
     committee: "JCC (US)",
     portfolio: "Secretary of War",
     award: "High Commendation (2nd)",
-  }
+  },
 ];
 
 const Home = () => {
@@ -639,7 +639,7 @@ const Home = () => {
 };
 
 function mun_to_text(mun: MUN) {
-  return `${mun.name} - ${mun.committee} - ${mun.portfolio} - ${mun.award}`;
+  return `${mun.name} [${mun.year}] - ${mun.committee} - ${mun.portfolio} - ${mun.award}`;
 }
 
 export default Home;

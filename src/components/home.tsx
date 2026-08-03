@@ -132,6 +132,13 @@ const muns: MUN[] = [
     portfolio: "Secretary of War",
     award: "High Commendation (2nd)",
   },
+  {
+    name: "SHISMUN",
+    year: 2026,
+    committee: "CCC",
+    portfolio: "Minister of Home Affairs",
+    award: "Best Delegate",
+  },
 ];
 
 const Home = () => {
